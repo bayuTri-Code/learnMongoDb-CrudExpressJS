@@ -27,7 +27,7 @@ This project follows the tutorial by [Dipesh Malvia](https://www.youtube.com/wat
 
 ### 1. Clone the repo
 ```bash
-git clone https://github.com/your-username/your-repo-name.git
+git clone https://github.com/bayuTri-Code/learnMongoDb-CrudExpressJS.git
 cd your-repo-name
 2. Install dependencies
 
