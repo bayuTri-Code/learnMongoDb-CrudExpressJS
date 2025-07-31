@@ -22,24 +22,6 @@ This project follows the tutorial by [Dipesh Malvia](https://www.youtube.com/wat
 - Dotenv
 - Nodemon (for development)
 
-## 📁 Project Structure
-
-project/
-│
-├── models/
-│ └── Item.js # Mongoose schema/model
-│
-├── routes/
-│ └── itemRoutes.js # API routes
-│
-├── .env # Environment variables (e.g., Mongo URI)
-├── app.js # Main server entry point
-├── package.json
-└── README.md
-
-bash
-Salin
-Edit
 
 ## ⚙️ Getting Started
 
