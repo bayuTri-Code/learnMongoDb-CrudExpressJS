@@ -12,6 +12,7 @@ const port = process.env.PORT || 3003;
 
 app.use(express.json());
 app.use("/api/contacts", require('./routes/contactsRouter'));
+app.use("/api/user", require('./routes/userRouter.js'));
 //middleware for error handling
 app.use(errorHandler);
 
