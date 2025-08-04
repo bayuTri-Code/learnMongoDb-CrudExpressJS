@@ -1,6 +1,13 @@
 const mongoose = require("mongoose");
 
 const contactScema = mongoose.Schema(
+   {
+    user_id: {
+      type: mongoose.mongo.ObjectId,
+      required: true,
+      ref: "User",
+    }
+  },
   {
     name: {
       type: String,
