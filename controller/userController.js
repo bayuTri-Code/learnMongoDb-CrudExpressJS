@@ -16,7 +16,7 @@ const registerUser = asyncHandler(async (req, res) => {
 
   if (userAvailable) {
     res.status(400);
-    throw new Error("User already registered");
+    throw new Error("email already registered");
   }
   const hashedPassword = await bcrypt.hash(password, 10);
   const user = await User.create({
@@ -58,7 +58,7 @@ const loginUser = asyncHandler(async (req, res) => {
 
       process.env.ACCESS_TOKEN_SECRET,
       {
-        expiresIn: "1m",
+        expiresIn: "30d",
       }
     );
     res.status(200).json({ accsesToken });
@@ -69,9 +69,8 @@ const loginUser = asyncHandler(async (req, res) => {
 });
 
 //desc current user
-const currentUser = asyncHandler(async (req, res) => {
-  // Logic for user registration
-  res.json({ message: "Current User successfully" });
+const currentUser = asyncHandler(async (req, res) => {  
+  res.json(req.user);
 });
 
 module.exports = {
